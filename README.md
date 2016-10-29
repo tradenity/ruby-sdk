@@ -1,3 +1,7 @@
+Welcome to Ruby SDK for Tradenity ecommerce REST API
+====================================================
+
+
 ## Prerequisites
 
 To use the Tradenity SDK, you must have:
