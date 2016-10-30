@@ -12,18 +12,18 @@ Gem::Specification.new do |spec|
 
 
   spec.summary       = %q{Access Tradenity eCommerce API.}
-  spec.description   = %q{Access Tradenity eCommerce API.}
+  spec.description   = %q{Client library for easy develop against Tradenity eCommerce REST API.}
   spec.homepage      = "http://githun.com/tradenity/ruby-sdk"
-  spec.license       = "APACHE 2"
+  spec.license       = "Apache-2.0"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.bindir        = "bin"
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_runtime_dependency 'virtus', '>= 1.0.5'
-  spec.add_runtime_dependency 'unirest', '>= 1.1.2'
-  spec.add_runtime_dependency 'bcrypt', '>= 3.1.1'
+  spec.add_runtime_dependency 'virtus', '~> 1.0', '>= 1.0.5'
+  spec.add_runtime_dependency 'unirest', '~> 1.1', '>= 1.1.2'
+  spec.add_runtime_dependency 'bcrypt', '~> 3.1', '>= 3.1.1'
 
   spec.add_development_dependency "bundler", "~> 1.8"
   spec.add_development_dependency "rake", "~> 10.0"

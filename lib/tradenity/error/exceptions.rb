@@ -10,12 +10,16 @@ module Tradenity
 
   class RequestErrorException < RuntimeError
     def initialize(error)
-      super(error.message)
+      super(error.message) if error != nil
       @error = error
     end
   end
 
   class AuthenticationException < RequestErrorException
+  end
+
+
+  class SessionExpiredException < RequestErrorException
   end
 
 

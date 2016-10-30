@@ -27,6 +27,10 @@ module Tradenity
       @current_session = session
     end
 
+    def reset_current_session
+      @current_session[:auth_token] = nil
+    end
+
     def auth_token
       if @current_session.has_key? :auth_token
         @current_session[:auth_token]
@@ -95,7 +99,11 @@ module Tradenity
         when 500
           raise ServerErrorException.new('API server error.')
         when 401
-          raise AuthenticationException.new(error)
+          if auth_token == nil
+            raise AuthenticationException.new(error)
+          else
+            raise SessionExpiredException.new(error)
+          end
         when 403
           raise AuthorizationException.new(error)
         when 404

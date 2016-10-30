@@ -8,4 +8,5 @@
 /pkg/
 /spec/reports/
 /tmp/
+*.gem
 tradenity-ruby-sdk.iml
