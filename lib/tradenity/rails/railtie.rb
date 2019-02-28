@@ -13,7 +13,7 @@ module Tradenity
         include Tradenity
         include Tradenity::RailsSupport
 
-        before_filter :adjust_session
+        before_action :adjust_session
 
       end
     end

@@ -2,6 +2,10 @@ Changelog
 ======
 
 
+## Version 1.0.1
+
+- Bug fix: change `before_filter` to `before_action` for rails 5 compatability
+
 ## Version 1.0.0
 
 - Improvement: Completely new SDK for the final v1 Tradenity REST API protocol
