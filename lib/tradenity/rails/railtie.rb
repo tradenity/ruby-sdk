@@ -1,7 +1,7 @@
 module Tradenity
   module RailsSupport
-    def adjust_tradenity_session
-      HttpClient.get_instance.current_session(session)
+    def adjust_session
+      Configuration.default.session_token_holder.session = session
     end
   end
 
@@ -13,7 +13,7 @@ module Tradenity
         include Tradenity
         include Tradenity::RailsSupport
 
-        before_filter :adjust_tradenity_session
+        before_filter :adjust_session
 
       end
     end

@@ -1,12 +1,13 @@
-Welcome to Ruby SDK for Tradenity ecommerce REST API
+Welcome to Ruby SDK for Tradenity ecommerce API
 ====================================================
 
+This is the official Ruby SDK for [Tradenity ecommerce API](https://www.tradenity.com).
 
 ## Prerequisites
 
 To use the Tradenity SDK, you must have:
 
--  Working Ruby development environment (currently v1.9.3 and v2.2.x are supported).
+-  Working Ruby development environment (currently v1.9.3 and v2.4.x are supported).
 -  Active account in [Tradenity](http://www.tradenity.com)
 
 
@@ -15,6 +16,13 @@ To use the Tradenity SDK, you must have:
 You can install the Ruby SDK using the standard `gem` tool.
 
 `gem install tradenity`
+
+
+## Create store and load sample data
+
+- If you are not yet registered, create a new [Tradenity account](https://www.tradenity.com).
+- After you login to your account, go to [Getting started](https://admin.tradenity.com/admin/getting_started) page and create new store. you may click "Create sample store" to create a new store and populate it with sample data
+- From the administration side menu, choose "Developers" > "API Keys", you can use the default key or generate a new one.
 
 
 ## Setup your credentials
@@ -36,7 +44,11 @@ The SDK provide implementation for Flask and Django. It's easy to implement your
 
 require 'Tradenity'
 
-Tradenity.api_key = 'sk_xxxxxxxxxxxxx'
+Tradenity.configure do |config|
+  config.username = "sk_xxxxxxxxxxxxxxxxxxxxxxxxx"
+  config.password = ""
+  config.session_token_holder = Tradenity::SessionTokenHolder.new
+end
 
 ```
 Make sure to replace the api keys with the ones for your store, otherwise you will get authentication error
@@ -44,7 +56,7 @@ Make sure to replace the api keys with the ones for your store, otherwise you wi
 ## Make your First call
 
 The Tradenity SDK is organized into a group of model entitiy classes that corresponds to the REST API's resources, each encapsulate the operation for a specific entity model,
-for example to perform operations related to the `Brand` resource you can use the corresponding `tradenity.sdk.entities.Brand` class.
+for example to perform operations related to the `Brand` resource you can use the corresponding `tradenity.resources.Brand` class.
 
 
 
