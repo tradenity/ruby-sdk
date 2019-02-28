@@ -83,7 +83,7 @@ You can find the code at github:
 
 We also provide a detailed explanation of the code of these sample applications in the form of a step by step tutorials:
 
-[Camera store for rails tutorial](/kb/tutorials/ruby/rails).
+[Camera store for rails tutorial](http://docs.tradenity.com/kb/tutorials/ruby/rails).
 
-[Camera store for sinatra tutorial](/kb/tutorials/ruby/sinatra).
+[Camera store for sinatra tutorial](http://docs.tradenity.com/kb/tutorials/ruby/sinatra).
 
