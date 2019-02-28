@@ -4,7 +4,7 @@ Changelog
 
 ## Version 1.0.1
 
-- Bug fix: change `before_filter` to `before_action` for rails 5 compatability
+- Bug fix: change `before_filter` to `before_action` in railtie for rails 5 compatibility
 
 ## Version 1.0.0
 
